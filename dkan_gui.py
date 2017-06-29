@@ -65,6 +65,11 @@ def main():
         help="Select the operation you want to perform:",
         choices=['Dataset', 'Resource']
         )
+    parser.add_argument(
+        '--parameters',
+        help="Specify direct and explcit JSON to update",
+        required=False
+        )
 
     args = parser.parse_args()
     run(args)
