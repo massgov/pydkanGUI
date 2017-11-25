@@ -11,7 +11,7 @@ def run(args):
           'title': args.title,
           'type': args.type
         }
-        print ("Attempting to create a new Dataset/Resource...")
+        print ("Attempting to create a new {}".format(args.type))
         dataset = api.node('create', data=data)
         print("Process Completed: ", dataset.status_code, dataset.text)
     elif args.Action == 'Attach_File':
